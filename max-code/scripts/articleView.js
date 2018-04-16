@@ -100,12 +100,14 @@ articleView.create = () => {
   $('#articles > *').remove();
 
   // TODO: Instantiate an article based on what's in the form fields:
+  let date = new Date();
+  let articleDate = date.toLocaleDateString();
   let aobj = {
     title: $('#title').val(),
     category: $('#category').val(),
     author: $('#author').val(),
     authorUrl: $('#authorUrl').val(),
-    publishedOn: $('#publishedOn').val(),
+    publishedOn: articleDate,
     body: $('#body').val(),
   };
 

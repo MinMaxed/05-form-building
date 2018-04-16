@@ -67,6 +67,19 @@
            4. Author's URL
            5. Article category
            6. Some way to know if this article is a draft or is published -->
+           <script id="article-template" type="text/x-handlebars-template">
+            <article class="clearfix" data-author="{{author}}" data-category="{{category}}">
+              <header>
+                <h1>{{title}}</h1>
+                <div class="byline">
+                  By <address><a href="{{authorUrl}}">{{author}}</a></address>
+                  {{publishStatus}}
+                </div>
+              </header>
+              <section class="article-body">{{{body}}}</section>
+              <a href="#" class="read-on">Read on &rarr;</a>
+            </article>
+          </script>
       </section>
 
       <section id="articles" class="tab-content">
